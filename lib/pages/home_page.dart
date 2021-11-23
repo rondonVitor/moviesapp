@@ -32,6 +32,10 @@ class _HomePageState extends State<HomePage> {
                 'Movies',
                 style: Theme.of(context).textTheme.headline3,
               ),
+              const SizedBox(height: 20),
+              TextField(
+                onChanged: _controller.onChanged,
+              ),
               ValueListenableBuilder<Movies?>(
                 valueListenable: _controller.movies,
                 builder: (_, movies, __) {
